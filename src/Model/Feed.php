@@ -2,6 +2,7 @@
 
 namespace Rushlow\Bundle\Atom\Model;
 
+use Rushlow\Bundle\Atom\Collection\EntryCollection;
 use Rushlow\Bundle\Atom\Collection\PersonCollection;
 
 class Feed
@@ -16,7 +17,7 @@ class Feed
 
     private PersonCollection $contributor;
 
-    private array $entry = [];
+    private EntryCollection $entry;
 
     private ?string $generator;
 

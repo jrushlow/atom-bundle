@@ -56,4 +56,9 @@ class Entry
         $this->id = $id;
         $this->title = $title;
     }
+
+    public function getId(): string
+    {
+        return $this->id;
+    }
 }
