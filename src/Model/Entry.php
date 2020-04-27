@@ -61,4 +61,13 @@ class Entry
     {
         return $this->id;
     }
+
+    public function getAuthors(): PersonCollection
+    {
+        if (!isset($this->author)) {
+            return new PersonCollection();
+        }
+
+        return $this->author;
+    }
 }

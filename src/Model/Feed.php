@@ -42,4 +42,22 @@ class Feed
         $this->id = $id;
         $this->title = $title;
     }
+
+    public function getAuthors(): PersonCollection
+    {
+        if (!isset($this->author)) {
+            return new PersonCollection();
+        }
+
+        return $this->author;
+    }
+
+    public function getEntries(): EntryCollection
+    {
+        if (!isset($this->entry)) {
+            return new EntryCollection();
+        }
+
+        return $this->entry;
+    }
 }
