@@ -4,7 +4,7 @@ namespace Rushlow\Bundle\Atom\Collection;
 
 abstract class AbstractCollection implements CollectionInterface
 {
-    private array $elements = [];
+    protected array $elements = [];
 
     public function getIterator(): \Traversable
     {

@@ -2,15 +2,15 @@
 
 namespace Rushlow\Bundle\Atom\Model;
 
+use Rushlow\Bundle\Atom\Collection\PersonCollection;
+
 class Entry
 {
     /**
      * An Author MUST be set unless the Src or Feed elements
      * have an author(s).
-     *
-     * @var array<Person>
      */
-    private array $author = [];
+    private PersonCollection $author;
 
     /**
      * @var array<string>
@@ -19,10 +19,7 @@ class Entry
 
     private Content $content;
 
-    /**
-     * @var array<Person>
-     */
-    private array $contributor = [];
+    private PersonCollection $contributor;
 
     private string $id;
 

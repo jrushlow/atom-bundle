@@ -2,19 +2,19 @@
 
 namespace Rushlow\Bundle\Atom\Model;
 
+use Rushlow\Bundle\Atom\Collection\PersonCollection;
+
 class Feed
 {
     /**
      * MUST have author(s) unless all of the entry elements
      * have at least one author set.
-     *
-     * @var array<Person>
      */
-    private array $author = [];
+    private PersonCollection $author;
 
     private array $category = [];
 
-    private array $contributor = [];
+    private PersonCollection $contributor;
 
     private array $entry = [];
 
